@@ -1,6 +1,7 @@
 import React from "react";
 import { Discord, Instagram, Medium, OpenSea, Twitter } from "../utils/icons";
 import CommonButton from "./common/CommonButton";
+import SubHeading from "./common/SubHeading";
 
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
           <div className="flex justify-between items-center">
             <a
               href="#"
-              className="text-2xl text-center mx-auto ff-moderfb tracking-[0]"
+              className="text-2xl text-center mx-auto ff-moderfb tracking-[0] mr-[120px]"
             >
               Hustlin' Hardos
             </a>
@@ -61,31 +62,31 @@ const Header = () => {
               href="#about"
               className="py-2 px-4 inline-block border-l-2 hover:bg-black hover:text-white transition-all ease-in-out"
             >
-              About us
+              <SubHeading SubText="About us" />
             </a>
             <a
               href="#services"
               className="py-2 px-4 inline-block border-l-2 hover:bg-black hover:text-white transition-all ease-in-out"
             >
-              Minting
+              <SubHeading SubText="Minting" />
             </a>
             <a
               href="#roadmap"
               className="py-2 px-4 inline-block border-l-2 hover:bg-black hover:text-white transition-all ease-in-out"
             >
-              Roadmap
+              <SubHeading SubText="Roadmap" />
             </a>
             <a
               href="#team"
               className="py-2 px-4 inline-block border-l-2 hover:bg-black hover:text-white transition-all ease-in-out"
             >
-              Team
+              <SubHeading SubText="Team" />
             </a>
             <a
               href="#faqs"
               className="py-2 px-4 inline-block border-l-2 border-r-2 hover:bg-black hover:text-white transition-all ease-in-out"
             >
-              FAQs
+              <SubHeading SubText="FAQs" />
             </a>
           </div>
         </nav>
