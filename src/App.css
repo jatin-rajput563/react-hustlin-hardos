@@ -2,6 +2,16 @@
 
 .ff-noto {
     font-family: "Noto Serif", sans-serif;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: ff-moderfb;
+    src: url('/assets/fonts/modernofbcomp-bold.otf');
+}
+
+.ff-moderfb {
+    font-family: ff-moderfb;
 }
 
 .rfm-marquee-container {
