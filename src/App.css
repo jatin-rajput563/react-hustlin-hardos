@@ -7,3 +7,10 @@
 .rfm-marquee-container {
     gap: 62px;
 }
+
+body {
+    background-image: url(../src/assets/images/png/bg-image.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
