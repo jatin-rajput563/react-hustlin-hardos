@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: ff-moderfb;
-    src: url('/assets/fonts/modernofbcomp-bold.otf');
+    src: url('src/assets/font/modernofbcomp-bold.otf');
 }
 
 .ff-moderfb {

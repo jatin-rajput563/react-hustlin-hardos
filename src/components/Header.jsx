@@ -6,7 +6,7 @@ import SubHeading from "./common/SubHeading";
 const Header = () => {
   return (
     <>
-      <div className="">
+      <div>
         <div className="max-w-[1140px] mx-auto pt-[15px] pb-[22px]">
           <div className="flex justify-between items-center">
             <a
