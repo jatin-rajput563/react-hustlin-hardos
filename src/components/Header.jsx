@@ -1,97 +1,156 @@
-import React from "react";
+import React, { useState } from "react";
 import { Discord, Instagram, Medium, OpenSea, Twitter } from "../utils/icons";
 import CommonButton from "./common/CommonButton";
-import SubHeading from "./common/SubHeading";
 
 const Header = () => {
-  return (
-    <>
-      <div>
-        <div className="max-w-[1140px] mx-auto pt-[15px] pb-[22px]">
-          <div className="flex justify-between items-center">
-            <a
-              href="#"
-              className="text-2xl text-center mx-auto ff-moderfb tracking-[0] mr-[120px]"
-            >
-              Hustlin' Hardos
-            </a>
-            <div className="flex items-center gap-5">
-              <a
-                href="https://discord.com"
-                target="_blank"
-                className="transition-transform duration-300 hover:scale-125"
-              >
-                <Discord />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                className="transition-transform duration-300 hover:scale-125"
-              >
-                <Twitter />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                className="transition-transform duration-300 hover:scale-125"
-              >
-                <Instagram />
-              </a>
-              <a
-                href="https://medium.com"
-                target="_blank"
-                className="transition-transform duration-300 hover:scale-125"
-              >
-                <Medium />
-              </a>
-              <a
-                href="https://opensea.io"
-                target="_blank"
-                className="transition-transform duration-300 hover:scale-125"
-              >
-                <OpenSea />
-              </a>
-            </div>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-            <CommonButton btnText="Connect Wallet" btnClass="ml-[20px]" />
+  const handleToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleClose = () => {
+    setMenuOpen(false);
+  };
+
+  return (
+    <header className="py-2">
+      <div className="max-w-[1140px] w-full mx-auto max-xl:px-4">
+        <div className="flex w-full justify-end items-center">
+          <div className="max-w-[658px] w-full">
+            <div className="w-full flex items-center justify-between">
+              <a
+                href="/"
+                className="ff-moderfb text-2xl leading-[100%] font-normal"
+              >
+                Hustlin' Hardos
+              </a>
+              <div
+                id="menu"
+                className={`flex gap-5 items-center transition-all duration-300 max-sm:z-40 max-sm:fixed max-sm:flex-col max-sm:w-full max-sm:h-full max-sm:justify-center max-sm:items-center max-sm:bg-cream max-sm:left-0 ${
+                  menuOpen ? "top-0 bg-[#F6F1E2]" : "-top-full"
+                }`}
+              >
+                <div className="max-w-[561px] justify-center items-center flex-col flex mx-auto sm:hidden border-x-2">
+                  <a
+                    href="#about"
+                    onClick={handleClose}
+                    className="px-6 border-t-2 w-full text-center py-[7px]"
+                  >
+                    About us
+                  </a>
+                  <a
+                    href="#minting"
+                    onClick={handleClose}
+                    className="px-6 border-t-2 w-full text-center py-[7px]"
+                  >
+                    Minting
+                  </a>
+                  <a
+                    href="#roadmap"
+                    onClick={handleClose}
+                    className="px-6 border-t-2 w-full text-center py-[7px]"
+                  >
+                    Roadmap
+                  </a>
+                  <a
+                    href="#team"
+                    onClick={handleClose}
+                    className="px-6 border-t-2 w-full text-center py-[7px]"
+                  >
+                    Team
+                  </a>
+                  <a
+                    href="#faqs"
+                    onClick={handleClose}
+                    className="px-6 border-y-2 w-full text-center py-[7px]"
+                  >
+                    FAQs
+                  </a>
+                </div>
+                <div className="flex gap-[18px] max-sm:gap-4 items-center">
+                  <a
+                    href="https://www.discord.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex size-6 justify-center items-center transition-transform duration-300 hover:scale-125"
+                  >
+                    <Discord />
+                  </a>
+                  <a
+                    href="https://www.twitter.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex size-6 justify-center items-center transition-transform duration-300 hover:scale-125"
+                  >
+                    <Twitter />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex size-6 justify-center items-center transition-transform duration-300 hover:scale-125"
+                  >
+                    <Instagram />
+                  </a>
+                  <a
+                    href="https://medium.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex size-6 justify-center items-center transition-transform duration-300 hover:scale-125"
+                  >
+                    <Medium />
+                  </a>
+                  <a
+                    href="https://opensea.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex size-6 justify-center items-center transition-transform duration-300 hover:scale-125"
+                  >
+                    <OpenSea />
+                  </a>
+                </div>
+                <div onClick={handleClose}>
+                  <CommonButton btnText="Connect Wallet" btnClass="ml-[20px]" />
+                </div>
+              </div>
+              <button
+                onClick={handleToggle}
+                className="sm:hidden relative z-50 overflow-hidden h-6 py-0.5 w-7 flex justify-between flex-col"
+              >
+                <span
+                  id="nav-line-1"
+                  className="flex w-7 bg-black h-1 transition-all duration-300 rounded-md"
+                ></span>
+                <span
+                  id="nav-line-2"
+                  className="flex w-7 bg-black h-1 transition-all duration-300 rounded-md relative after:absolute after:w-full after:rounded-md after:h-full after:left-0 after:top-0 after:bg-black after:transition-all after:duration-300"
+                ></span>
+                <span
+                  id="nav-line-3"
+                  className="flex w-7 bg-black h-1 transition-all duration-300 rounded-md"
+                ></span>
+              </button>
+            </div>
           </div>
         </div>
-        <nav className="border-t-[2px] border-b-[2px]">
-          <div className=" items-center flex justify-center">
-            <a
-              href="#about"
-              className="py-2 px-4 inline-block border-l-2 hover:bg-black hover:text-white transition-all ease-in-out"
-            >
-              <SubHeading SubText="About us" />
-            </a>
-            <a
-              href="#services"
-              className="py-2 px-4 inline-block border-l-2 hover:bg-black hover:text-white transition-all ease-in-out"
-            >
-              <SubHeading SubText="Minting" />
-            </a>
-            <a
-              href="#roadmap"
-              className="py-2 px-4 inline-block border-l-2 hover:bg-black hover:text-white transition-all ease-in-out"
-            >
-              <SubHeading SubText="Roadmap" />
-            </a>
-            <a
-              href="#team"
-              className="py-2 px-4 inline-block border-l-2 hover:bg-black hover:text-white transition-all ease-in-out"
-            >
-              <SubHeading SubText="Team" />
-            </a>
-            <a
-              href="#faqs"
-              className="py-2 px-4 inline-block border-l-2 border-r-2 hover:bg-black hover:text-white transition-all ease-in-out"
-            >
-              <SubHeading SubText="FAQs" />
-            </a>
-          </div>
-        </nav>
       </div>
-    </>
+      <div className="w-full mt-[7px] border-t-2 border-b-2">
+        <div className="max-w-[561px] justify-center items-center flex mx-auto">
+          {["about", "minting", "roadmap", "team", "faqs"].map(
+            (item, index) => (
+              <a
+                key={item}
+                href={`#${item}`}
+                className={`px-6 border-r-2 first:border-l-2 whitespace-nowrap hover:bg-black hover:text-white transition-all duration-500 max-md:text-sm max-sm:text-xs py-[7px] max-sm:py-1 max-sm:px-2`}
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </a>
+            )
+          )}
+        </div>
+      </div>
+    </header>
   );
 };
 

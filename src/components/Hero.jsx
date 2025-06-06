@@ -3,11 +3,11 @@ import HeroImg from '../assets/images/png/hero-img.png'
 const Hero = () => {
   return (
     <>
-      <div className="min-h-screen">
+      <div>
         <div className="max-w-[1140px] mx-auto px-4">
-          <h1 className='ff-moderfb xl:text-[157px] md:text-8xl sm:text-6xl whitespace-nowrap py-5 max-lg:py-4 max-md:py-3 max-sm:py-2 text-center text-5xl leading-[100%] text-black'>THE HUSTLIN’ HARDOS.</h1>
+          <h1 className='ff-moderfb xl:text-[157px] md:text-8xl sm:text-6xl whitespace-nowrap py-5 max-lg:py-4 max-md:py-3 max-sm:py-2 text-center text-4xl leading-[100%] text-black'>THE HUSTLIN’ HARDOS.</h1>
         </div>
-        <div className="border-t-2 border-b-2"> 
+        <div className="border-t-2"> 
             <img className="object-cover w-full h-full  max-h-[476px]" src={HeroImg} alt="" />
         </div>
       </div>
