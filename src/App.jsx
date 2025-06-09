@@ -1,5 +1,6 @@
 import "./App.css";
 import BreakingNews from "./components/BreakingNews";
+import Faq from "./components/Faq";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import LatestNews from "./components/LatestNews";
@@ -19,6 +20,7 @@ function App() {
       <Minting />
       <Roadmap />
       <Team />
+      <Faq />
     </>
   );
 }

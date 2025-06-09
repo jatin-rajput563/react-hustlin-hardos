@@ -33,6 +33,7 @@ export const SliderData = [
         link: "Read More..."
     },
 ];
+
 export const TRISTIQUE_DATA = [
     {
         title: "Etiam eget"
@@ -46,7 +47,7 @@ export const TRISTIQUE_DATA = [
     {
         title: "Tincidunt."
     },
-]
+];
 
 export const TEAM_DATA = [
     {
@@ -68,5 +69,29 @@ export const TEAM_DATA = [
         img: teamImgTwo,
         heading: "Johnny Banjo ",
         para: "The Hustlin’ Hardos have arrived to the metaverse! 9,999 Hardos have taken over. Lorem Ipsum is simply dummy text of the printing industry."
+    }
+];
+
+export const FAQ_DATA = [
+    {
+        heading: "What is an NFT?"
+    },
+    {
+        heading: "How do I get an NFT?"
+    },
+    {
+        heading: "How much is a Hustlin' Hardo NFT?"
+    },
+    {
+        heading: "Where can I mint a Hustlin' Hardos NFT?"
+    },
+    {
+        heading: "How do I mint a Hustlin' Hardo NFT?"
+    },
+    {
+        heading: "How many Hustlin' Hardos NFTs will there be?"
+    },
+    {
+        heading: "What is the utility and functionality of a Hustlin' Hardo NFT?"
     }
 ]

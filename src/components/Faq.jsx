@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import Heading from "./common/Heading";
+import CommonHeading from "./common/CommonHeading";
 import { FAQ_DATA } from "../utils/helper";
-import Description from "./common/Description";
-
+import CommonPara from "./common/CommonPara";
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -15,9 +14,9 @@ const Faq = () => {
       <div id="faq">
         <div className="max-w-[1140px] px-3 xl:px-0 mx-auto py-10 sm:py-14 md:py-20 lg:py-[88.5px]">
           <div className="flex items-center justify-between">
-            <Heading
-              headingClass="max-sm:!tracking-[-1px]"
-              headingText="Faqs"
+            <CommonHeading
+              HeadClass={"max-sm:!tracking-[-1px]"}
+              HeadText={"Faqs"}
             />
           </div>
         </div>
@@ -42,13 +41,13 @@ const Faq = () => {
                       }`}
                     ></span>
                   </button>
-                  <Description
-                    descriptionClass={`text-base leading-[150%] overflow-hidden transition-all duration-700 ease-in-out max-w-[992px] ${
+                  <CommonPara
+                    ParaClass={`text-base leading-[150%] overflow-hidden transition-all duration-700 ease-in-out max-w-[992px] ${
                       openIndex === index
                         ? "max-h-[330px] pt-4 opacity-100"
                         : "max-h-0 pt-0 opacity-0"
                     }`}
-                    descriptionText={
+                    ParaText={
                       "NFT stands for “Non-fungible token,” which means that it’s a unique, digital item with blockchain-managed ownership that users can buy, own, and trade. Some NFT’s fundamental function is to be digital art. But they can also offer additional benefits like exclusive access to websites, event tickets, game items, and ownership records for physical objects. Think of it as a unique piece of art that can also work as a “members-only” card. Hustlin' Hardos works like this"
                     }
                   />
