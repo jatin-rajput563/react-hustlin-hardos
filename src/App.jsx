@@ -6,6 +6,7 @@ import LatestNews from "./components/LatestNews";
 import Minting from "./components/Minting";
 import NavSlider from "./components/NavSlider";
 import Roadmap from "./components/RoadMap";
+import Team from "./components/Team";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <LatestNews />
       <Minting />
       <Roadmap />
+      <Team />
     </>
   );
 }
