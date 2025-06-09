@@ -9,7 +9,7 @@ const CommonButton = ({ btnText, btnClass }) => {
           bg-[#FFD600]
           border-2 border-black
           text-sm font-semibold ff-noto
-          py-[12px] px-[16px]
+          py-[9.5px] px-[14.4px]
           uppercase
           overflow-hidden
           transition-all duration-500 ease-in-out

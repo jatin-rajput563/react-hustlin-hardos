@@ -16,7 +16,7 @@ const LatestNews = () => {
   return (
     <>
       <div className="">
-        <div className="max-w-[1140px] mx-auto px-4 py-[89px]">
+        <div className="max-w-[1140px] mx-auto py-[40px] md:py-[60px] lg:py-[89px]">
           <div className="flex justify-between items-center">
             <CommonHeading HeadText="Latest Tweets" HeadClass="uppercase" />
             <div className="flex items-center gap-[55px]">

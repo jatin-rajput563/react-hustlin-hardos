@@ -13,7 +13,10 @@ const Minting = () => {
     <>
       <div id="minting">
         <div className="max-w-[1140px] px-3 xl:px-0 mx-auto py-10 sm:py-14 md:py-20 lg:py-[88.5px]">
-          <CommonHeading HeadText={"Minting"} />
+          <CommonHeading
+            HeadClass={"![text-shadow:2px_2px_4px_#00000040]"}
+            HeadText={"Minting"}
+          />
         </div>
         <div className="border-y-2 border-solid max-xl:px-3 border-black">
           <div className="max-w-[1140px] max-lg:border-none mx-auto border-x-2 border-solid border-black">
@@ -29,7 +32,7 @@ const Minting = () => {
                   <div className="min-h-[49px] border-2 mt-[15px] border-solid flex border-black max-sm:max-w-[170px] max-w-[238px]">
                     <button
                       onClick={decrement}
-                      className="text-4xl cursor-pointer max-md:text-3xl px-6 max-sm:px-3 max-sm:text-2xl font-semibold"
+                      className="text-4xl cursor-pointer max-md:text-3xl px-6 max-sm:px-3 max-sm:text-2xl pb-[5px] font-semibold"
                     >
                       -
                     </button>

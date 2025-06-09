@@ -11,7 +11,7 @@ const Roadmap = () => {
           <div className="flex items-center justify-between">
             <CommonHeading
               HeadText={"RoadMap"}
-              HeadClass={"max-sm:!tracking-[-1px]"}
+              HeadClass={"max-sm:!tracking-[-1px] ![text-shadow:2px_2px_4px_#00000040]"}
             />
           </div>
         </div>
@@ -21,7 +21,7 @@ const Roadmap = () => {
             <img
               src={lineImg}
               alt="line-img"
-              className="absolute max-[601px]:!h-[1820px] max-[801px]:h-[1650px]  max-[761px]:!h-[1380px] top-[99px] max-md:top-16 max-sm:top-10 left-1/2 max-lg:left-10 h-[1380px] max-[768px]:!h-[1300px] max-[601px]:!left-[6.5%] max-[601px]:max-h-[unset] lg:-translate-x-1/2"
+              className="absolute max-[601px]:!h-[1820px] max-[801px]:h-[1650px]  max-[761px]:!h-[1380px] top-[99px] max-md:top-16 max-sm:top-10 left-1/2 max-lg:left-10 h-[1450px] max-[768px]:!h-[1300px] max-[601px]:!left-[6.5%] max-[601px]:max-h-[unset] lg:-translate-x-1/2"
             />
             <div className="max-w-[495px] max-[1141px]:max-w-[450px] max-lg:max-w-[unset] w-full relative lg:ml-auto">
               <div className="absolute top-0 left-[-20%] max-[1280px]:left-[-17.5%] max-[1140px]:left-[-16%] max-lg:left-[-12.5%] max-[801px]:!left-[-17.5%] max-[601px]:!left-[-16.5%] max-lg:top-0 size-[59px] max-[601px]:size-9 bg-white border-2 border-solid border-black rounded-full flex justify-center items-center">
