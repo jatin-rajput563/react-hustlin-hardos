@@ -3,7 +3,7 @@ import BreakingNews from "./components/BreakingNews";
 import Faq from "./components/Faq";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import LatestNews from "./components/LatestNews";
+import LatestTweets from "./components/LatestTweets";
 import Minting from "./components/Minting";
 import NavSlider from "./components/NavSlider";
 import Roadmap from "./components/RoadMap";
@@ -16,7 +16,7 @@ function App() {
       <Header />
       <Hero />
       <BreakingNews />
-      <LatestNews />
+      <LatestTweets />
       <Minting />
       <Roadmap />
       <Team />

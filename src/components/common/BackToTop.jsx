@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
-
-  // Show button when scrolling down
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.scrollY > 300) {
@@ -17,8 +15,6 @@ const BackToTop = () => {
 
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
-
-  // Scroll to top smoothly
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -31,7 +27,7 @@ const BackToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 group"
+          className="fixed bottom-6 right-6 z-50 group cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

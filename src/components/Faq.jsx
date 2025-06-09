@@ -15,7 +15,7 @@ const Faq = () => {
         <div className="max-w-[1140px] px-3 xl:px-0 mx-auto py-10 sm:py-14 md:py-20 lg:py-[88.5px]">
           <div className="flex items-center justify-between">
             <CommonHeading
-              HeadClass={"max-sm:!tracking-[-1px]"}
+              HeadClass={"max-sm:!tracking-[-1px] ![text-shadow:2px_2px_4px_#00000040]"}
               HeadText={"Faqs"}
             />
           </div>

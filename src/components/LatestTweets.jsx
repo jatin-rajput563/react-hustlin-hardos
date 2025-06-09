@@ -7,9 +7,10 @@ import "swiper/css/navigation";
 import CommonHeading from "./common/CommonHeading";
 import LeftArrow from "../assets/images/svg/left-arrow.svg";
 import RightArrow from "../assets/images/svg/right-arrow.svg";
-import { SliderData } from "../utils/helper";
+import { SLIDER_DATA } from "../utils/helper";
+// import { Slider_Data } from "../utils/helper";
 
-const LatestNews = () => {
+const LatestTweets = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -20,10 +21,10 @@ const LatestNews = () => {
           <div className="flex justify-between items-center">
             <CommonHeading HeadText="Latest Tweets" HeadClass="uppercase" />
             <div className="flex items-center gap-[55px]">
-              <button ref={prevRef}>
+              <button ref={prevRef} className="cursor-pointer">
                 <img src={LeftArrow} alt="left-arrow" />
               </button>
-              <button ref={nextRef}>
+              <button ref={nextRef} className="cursor-pointer">
                 <img src={RightArrow} alt="right-arrow" />
               </button>
             </div>
@@ -49,13 +50,13 @@ const LatestNews = () => {
               }}
               modules={[Navigation]}
             >
-              {SliderData.map((item, index) => (
+              {SLIDER_DATA.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex flex-col py-[48px] pl-[26px] pr-[70px] border-l-2">
+                  <div className="flex flex-col px-[26px] py-[47px] border-l-2">
                     <p className="m-0 font-semibold text-[36px] leading-[111%] ff-noto">
                       {item.name}
                     </p>
-                    <div className="flex gap-[11px] items-center">
+                    <div className="flex gap-[11px] items-center pt-[13px]">
                       <a
                         href="https://x.com/"
                         target="_blank"
@@ -67,12 +68,12 @@ const LatestNews = () => {
                         {item.date}
                       </p>
                     </div>
-                    <p className="ff-noto text-sm leading-[100%] max-w-[327px] m-0">
+                    <p className="ff-noto text-sm leading-[121%] max-w-[327px] m-0 pt-[13px]">
                       {item.description}
                     </p>
                     <a
                       href="#"
-                      className="ff-noto text-sm leading-[100%] hover:text-sky-800"
+                      className="ff-noto text-sm leading-[100%] hover:text-sky-800 pt-[15px]"
                     >
                       {item.link}
                     </a>
@@ -87,4 +88,4 @@ const LatestNews = () => {
   );
 };
 
-export default LatestNews;
+export default LatestTweets;

@@ -14,7 +14,7 @@ const Team = () => {
           <div className="flex items-center justify-between">
             <CommonHeading
               HeadText={"Team"}
-              HeadClass={"max-sm:!tracking-[-1px]"}
+              HeadClass={"max-sm:!tracking-[-1px] ![text-shadow:2px_2px_4px_#00000040]"}
             />
             <div className="flex items-center gap-4 sm:gap-[55px]">
               <p className="swiper-arrow team-prev-btn cursor-pointer">

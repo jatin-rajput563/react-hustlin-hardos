@@ -1,42 +1,42 @@
-import { Twitter } from "./icons";
+import { SliderTwitter } from "./icons";
 
 import teamImgOne from '../assets/images/png/team-img-1.png'
 import teamImgTwo from '../assets/images/png/team-img-2.png'
 
-export const SliderData = [
+export const SLIDER_DATA = [
     {
         name: "Etiam eget",
-        icon: Twitter,
+        icon: SliderTwitter,
         date: "23/02/2022",
         description: "Diam tellus arcu, amet ornare nulla ut scelerisque et. Cum porta ultrices quam in.",
         link: "Read More..."
     },
     {
         name: "Venenatis.",
-        icon: Twitter,
+        icon: SliderTwitter,
         date: "22/02/2022",
         description: "Tortor dolor ultrices mauris aliquam feugiat amet ultrices facilisi. Venenatis.",
         link: "Read More..."
     },
     {
         name: "Quis vulputate.",
-        icon: Twitter,
+        icon: SliderTwitter,
         date: "20/02/2022",
         description: "Vestibulum at gravida amet ullamcorper a ipsum laoreet tortor. Et tortor vel arcu ac.",
         link: "Read More..."
     },
     {
         name: "Venenatis.",
-        icon: Twitter,
+        icon: SliderTwitter,
         date: "22/02/2022",
         description: "Tortor dolor ultrices mauris aliquam feugiat amet ultrices facilisi. Venenatis.",
         link: "Read More..."
     },
-];
+]
 
 export const TRISTIQUE_DATA = [
     {
-        title: "Etiam eget"
+        title: "Etiam eget."
     },
     {
         title: "Tristique."
