@@ -58,7 +58,7 @@ const Faq = () => {
         </div>
       </div>
       <div className="text-[16px] text-center ff-noto leading-[100%] pt-[32px] pb-[24px]">
-        © Hustlin' Hardos 2022
+        © Hustlin' Hardos 2025
       </div>
     </>
   );

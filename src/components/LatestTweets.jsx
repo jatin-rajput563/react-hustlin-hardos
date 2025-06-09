@@ -17,7 +17,7 @@ const LatestTweets = () => {
   return (
     <>
       <div className="">
-        <div className="max-w-[1140px] mx-auto py-[40px] md:py-[60px] lg:py-[89px]">
+        <div className="max-w-[1140px] px-3 mx-auto py-[40px] md:py-[60px] lg:py-[89px]">
           <div className="flex justify-between items-center">
             <CommonHeading HeadText="Latest Tweets" HeadClass="uppercase" />
             <div className="flex items-center gap-[55px]">
@@ -52,7 +52,7 @@ const LatestTweets = () => {
             >
               {SLIDER_DATA.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex flex-col px-[26px] py-[47px] border-l-2">
+                  <div className="flex flex-col px-[26px] max-[1025px]:h-[259px] py-[47px] border-l-2">
                     <p className="m-0 font-semibold text-[36px] leading-[111%] ff-noto">
                       {item.name}
                     </p>
