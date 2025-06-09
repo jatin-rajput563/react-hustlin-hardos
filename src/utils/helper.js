@@ -29,4 +29,19 @@ export const SliderData = [
         description: "Tortor dolor ultrices mauris aliquam feugiat amet ultrices facilisi. Venenatis.",
         link: "Read More..."
     },
+];
+export const TRISTIQUE_DATA = [
+    {
+        title: "Etiam eget"
+    },
+    {
+        title: "Tristique."
+    },
+    {
+        title: "Aliquet ac."
+    },
+    {
+        title: "Tincidunt."
+    },
 ]
+

@@ -55,6 +55,18 @@ const NavSlider = () => {
                 +0.03%
               </p>
             </div>
+            <div className=" flex gap-[7.01px] items-center py-[3px] px-[4px]">
+              <p className="text-white text-sm ff-noto">S&P</p>
+              <p className="border border-[#FF1300] rounded-[4px] text-[#FF1300] m-0">
+                -1.01%
+              </p>
+            </div>
+            <div className=" flex gap-[7.01px] items-center py-[3px] px-[4px]">
+              <p className="text-white text-sm ff-noto">ASD 100</p>
+              <p className="border border-[#FFD600] rounded-[4px] text-[#FFD600] m-0">
+                +0.13%
+              </p>
+            </div>
           </div>
         </Marquee>
       </div>
