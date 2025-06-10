@@ -12,16 +12,17 @@ const Header = () => {
     { href: "https://medium.com/", icon: <Medium /> },
     { href: "https://opensea.io/", icon: <OpenSea /> },
   ];
-
+  if (menuOpen) {
+    document.body.classList.add("overflow-hidden");
+  } else {
+    document.body.classList.remove("overflow-hidden");
+  }
   return (
     <>
       <div className="py-2">
         <div className="max-w-[1140px] w-full mx-auto max-xl:px-4 flex justify-end items-center ">
           <div className="max-w-[658px] w-full flex items-center justify-between">
-            <a
-              href="/"
-              className="ff-moderfb text-2xl leading-[100%]"
-            >
+            <a href="/" className="ff-moderfb text-2xl leading-[100%]">
               Hustlin' Hardos
             </a>
             <div
