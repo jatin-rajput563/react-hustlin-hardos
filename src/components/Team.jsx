@@ -52,7 +52,7 @@ const Team = () => {
                 <SwiperSlide>
                   <div
                     key={index}
-                    className="py-12 sm:py-[53.5px]  md:max-w-[570px] h-full px-7 sm:px-14 md:px-7 lg:px-[81.5px] border-r-2 bg-[url('src/assets/images/png/team-slider-bg.png')] bg-cover bg-no-repeat"
+                    className="py-12 sm:py-[53.5px] md:max-w-[570px] h-full px-7 sm:px-14 md:px-7 lg:px-[81.5px] border-r-2 bg-[url('../assets/images/png/team-slider-bg.png')] bg-cover bg-no-repeat"
                   >
                     <img
                       className="flex justify-center mx-auto"

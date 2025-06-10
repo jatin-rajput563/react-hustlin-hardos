@@ -4,153 +4,98 @@ import CommonButton from "./common/CommonButton";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleToggle = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const handleClose = () => {
-    setMenuOpen(false);
-  };
+  const navLinks = ["about us", "minting", "roadmap", "team", "faqs"];
+  const socialLinks = [
+    { href: "https://www.discord.com/", icon: <Discord /> },
+    { href: "https://www.twitter.com/", icon: <Twitter /> },
+    { href: "https://www.instagram.com/", icon: <Instagram /> },
+    { href: "https://medium.com/", icon: <Medium /> },
+    { href: "https://opensea.io/", icon: <OpenSea /> },
+  ];
 
   return (
-    <header className="py-2">
-      <div className="max-w-[1140px] w-full mx-auto max-xl:px-4">
-        <div className="flex w-full justify-end items-center">
-          <div className="max-w-[658px] w-full">
-            <div className="w-full flex items-center justify-between">
-              <a
-                href="/"
-                className="ff-moderfb text-2xl leading-[100%] font-normal"
-              >
-                Hustlin' Hardos
-              </a>
-              <div
-                id="menu"
-                className={`flex gap-5 items-center transition-all duration-300 max-sm:z-40 max-sm:fixed max-sm:flex-col max-sm:w-full max-sm:h-full max-sm:justify-center max-sm:items-center max-sm:bg-cream max-sm:left-0 ${
-                  menuOpen ? "top-0 bg-[#F6F1E2]" : "-top-full"
-                }`}
-              >
-                <div className="max-w-[561px] justify-center items-center flex-col flex mx-auto sm:hidden border-x-2">
+    <>
+      <div className="py-2">
+        <div className="max-w-[1140px] w-full mx-auto max-xl:px-4 flex justify-end items-center ">
+          <div className="max-w-[658px] w-full flex items-center justify-between">
+            <a
+              href="/"
+              className="ff-moderfb text-2xl leading-[100%]"
+            >
+              Hustlin' Hardos
+            </a>
+            <div
+              id="menu"
+              className={`flex gap-5 items-center transition-all duration-300 max-sm:z-40 max-sm:fixed max-sm:flex-col max-sm:w-full max-sm:h-full max-sm:justify-center max-sm:items-center max-sm:bg-cream max-sm:left-0 ${
+                menuOpen ? "top-0 bg-[#F6F1E2]" : "-top-full"
+              }`}
+            >
+              <div className="max-w-[561px] flex-col flex mx-auto sm:hidden border-x-2">
+                {navLinks.map((link, i) => (
                   <a
-                    href="#about"
-                    onClick={handleClose}
-                    className="px-6 border-t-2 w-full text-center py-[7px]"
+                    key={link}
+                    href={`#${link}`}
+                    onClick={() => setMenuOpen(false)}
+                    className={`px-6 ${
+                      i === 0 ? "border-t-2" : ""
+                    } border-t-2 w-full text-center py-[7px] uppercase ${
+                      i === navLinks.length - 1 ? "border-b-2" : ""
+                    }`}
                   >
-                    About us
+                    {link.charAt(0).toUpperCase() + link.slice(1)}
                   </a>
-                  <a
-                    href="#minting"
-                    onClick={handleClose}
-                    className="px-6 border-t-2 w-full text-center py-[7px]"
-                  >
-                    Minting
-                  </a>
-                  <a
-                    href="#roadmap"
-                    onClick={handleClose}
-                    className="px-6 border-t-2 w-full text-center py-[7px]"
-                  >
-                    Roadmap
-                  </a>
-                  <a
-                    href="#team"
-                    onClick={handleClose}
-                    className="px-6 border-t-2 w-full text-center py-[7px]"
-                  >
-                    Team
-                  </a>
-                  <a
-                    href="#faqs"
-                    onClick={handleClose}
-                    className="px-6 border-y-2 w-full text-center py-[7px]"
-                  >
-                    FAQs
-                  </a>
-                </div>
-                <div className="flex gap-[18px] max-sm:gap-4 items-center">
-                  <a
-                    href="https://www.discord.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex size-6 justify-center items-center transition-transform duration-300 hover:scale-125"
-                  >
-                    <Discord />
-                  </a>
-                  <a
-                    href="https://www.twitter.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex size-6 justify-center items-center transition-transform duration-300 hover:scale-125"
-                  >
-                    <Twitter />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex size-6 justify-center items-center transition-transform duration-300 hover:scale-125"
-                  >
-                    <Instagram />
-                  </a>
-                  <a
-                    href="https://medium.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex size-6 justify-center items-center transition-transform duration-300 hover:scale-125"
-                  >
-                    <Medium />
-                  </a>
-                  <a
-                    href="https://opensea.io/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex size-6 justify-center items-center transition-transform duration-300 hover:scale-125"
-                  >
-                    <OpenSea />
-                  </a>
-                </div>
-                <div onClick={handleClose}>
-                  <CommonButton btnText="Connect Wallet" btnClass="ml-[20px]" />
-                </div>
+                ))}
               </div>
-              <button
-                onClick={handleToggle}
-                className="sm:hidden relative z-50 overflow-hidden h-6 py-0.5 w-7 flex justify-between flex-col"
-              >
-                <span
-                  id="nav-line-1"
-                  className="flex w-7 bg-black h-1 transition-all duration-300 rounded-md"
-                ></span>
-                <span
-                  id="nav-line-2"
-                  className="flex w-7 bg-black h-1 transition-all duration-300 rounded-md relative after:absolute after:w-full after:rounded-md after:h-full after:left-0 after:top-0 after:bg-black after:transition-all after:duration-300"
-                ></span>
-                <span
-                  id="nav-line-3"
-                  className="flex w-7 bg-black h-1 transition-all duration-300 rounded-md"
-                ></span>
-              </button>
+              <div className="flex gap-[18px] max-sm:gap-4 items-center">
+                {socialLinks.map(({ href, icon }, index) => (
+                  <a
+                    key={index}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex size-6 justify-center items-center transition-transform duration-300 hover:scale-125"
+                  >
+                    {icon}
+                  </a>
+                ))}
+              </div>
+              <div onClick={() => setMenuOpen(false)}>
+                <CommonButton btnText="Connect Wallet" btnClass="ml-[20px]" />
+              </div>
             </div>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="sm:hidden relative z-50 overflow-hidden h-6 py-0.5 w-7 flex justify-between flex-col"
+            >
+              {["nav-line-1", "nav-line-2", "nav-line-3"].map((id, i) => (
+                <span
+                  key={id}
+                  id={id}
+                  className={`flex w-7 bg-black h-1 transition-all duration-300 rounded-md ${
+                    i === 1
+                      ? "relative after:absolute  after:w-full after:rounded-md after:h-full after:left-0 after:top-0 after:bg-black after:transition-all after:duration-300"
+                      : ""
+                  }`}
+                ></span>
+              ))}
+            </button>
           </div>
         </div>
-      </div>
-      <div className="w-full mt-[7px] border-t-2 border-b-2">
-        <div className="max-w-[561px] justify-center items-center flex mx-auto">
-          {["about", "minting", "roadmap", "team", "faqs"].map(
-            (item, index) => (
+        <div className="w-full mt-[7px] border-t-2 border-b-2">
+          <div className="max-w-[561px] flex justify-center items-center mx-auto">
+            {navLinks.map((item, index) => (
               <a
-                key={item}
+                key={index}
                 href={`#${item}`}
-                className={`px-6 border-r-2 first:border-l-2 whitespace-nowrap hover:bg-black hover:text-white transition-all duration-500 max-md:text-sm max-sm:text-xs py-[7px] max-sm:py-1 max-sm:px-2`}
+                className="px-6 border-r-2 uppercase first:border-l-2 whitespace-nowrap hover:bg-black hover:text-white transition-all duration-500 max-md:text-sm max-sm:text-xs py-[7px] max-sm:py-1 max-sm:px-2"
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </a>
-            )
-          )}
+            ))}
+          </div>
         </div>
       </div>
-    </header>
+    </>
   );
 };
 

@@ -11,7 +11,7 @@ const Faq = () => {
 
   return (
     <>
-      <div id="faq">
+      <div id="faqs">
         <div className="max-w-[1140px] px-3 xl:px-0 mx-auto py-10 sm:py-14 md:py-20 lg:py-[88.5px]">
           <div className="flex items-center justify-between">
             <CommonHeading
@@ -32,9 +32,9 @@ const Faq = () => {
                 >
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className="w-full outline-0 cursor-pointer flex justify-between items-center text-start font-semibold text-black text-2xl max-md:text-xl max-sm:text-lg"
+                    className="w-full outline-0 cursor-pointer flex justify-between items-baseline text-start font-semibold text-black text-2xl max-md:text-xl max-sm:text-lg"
                   >
-                    <span>{item.heading}</span>
+                    <span>{item}</span>
                     <span
                       className={`min-w-2 min-h-0.5 sm:min-w-0.5 sm:min-h-3 bg-black relative after:absolute after:w-full after:h-full after:bg-black after:rotate-90 after:transition-all after:duration-400  ${
                         openIndex === index ? "after:hidden sm:rotate-90" : ""
@@ -42,7 +42,7 @@ const Faq = () => {
                     ></span>
                   </button>
                   <CommonPara
-                    ParaClass={`text-base leading-[150%] overflow-hidden transition-all duration-700 ease-in-out max-w-[992px] ${
+                    ParaClass={` leading-[150%] overflow-hidden transition-all duration-700 ease-in-out max-w-[992px] ${
                       openIndex === index
                         ? "max-h-[330px] pt-4 opacity-100"
                         : "max-h-0 pt-0 opacity-0"
@@ -57,7 +57,7 @@ const Faq = () => {
           </div>
         </div>
       </div>
-      <div className="text-[16px] text-center ff-noto leading-[100%] pt-[32px] pb-[24px]">
+      <div className="text-center ff-noto leading-[100%] pt-8 pb-6">
         © Hustlin' Hardos 2025
       </div>
     </>

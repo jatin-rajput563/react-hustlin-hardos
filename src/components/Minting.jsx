@@ -24,7 +24,7 @@ const Minting = () => {
               <div className="lg:max-w-[570px] px-[25px] max-lg:px-0 w-full">
                 <div className="lg:max-w-[438px]">
                   <CommonPara
-                    ParaClass={" !leading-[140%] text-black"}
+                    ParaClass={"!leading-[140%] text-black"}
                     ParaText={
                       "Most of the Hustlin’ Hardos first experienced NFTs via other successful projects like NBA TopShot, where revealing your newly minted item invoked the same emotions as opening up that first pack of baseball cards. NFTs have allowed us to enjoy those feelings once again while also empowering communities through shared ownership. The space has seen incredible growth over the past year, and it is our belief that we are in the very early innings of the paradigm shift that will be powered by web3."
                     }
@@ -66,11 +66,11 @@ const Minting = () => {
         </div>
         <div className="max-w-[832px] px-3 py-[21px] justify-between gap-5 sm:gap-7 lg:gap-10 items-center flex flex-wrap mx-auto">
           {TRISTIQUE_DATA.map((item, index) => (
-            <div key={index} className="flex flex-col gap-3">
-              <p className="text-2xl leading-[111%] max-lg:text-xl max-md:text-lg max-sm:text-sm">
-                {item.title}
+            <div key={index} className="flex flex-col gap-3 flex-wrap">
+              <p className="text-2xl leading-[111%]">
+                {item}
               </p>
-              <p className="text-4xl max-lg:text-3xl max-md:text-2xl max-sm:text-sm font-semibold leading-[111%]">
+              <p className="text-4xl font-semibold leading-[111%]">
                 42
               </p>
             </div>

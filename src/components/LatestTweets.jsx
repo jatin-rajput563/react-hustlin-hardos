@@ -8,7 +8,6 @@ import CommonHeading from "./common/CommonHeading";
 import LeftArrow from "../assets/images/svg/left-arrow.svg";
 import RightArrow from "../assets/images/svg/right-arrow.svg";
 import { SLIDER_DATA } from "../utils/helper";
-// import { Slider_Data } from "../utils/helper";
 
 const LatestTweets = () => {
   const prevRef = useRef(null);
@@ -16,8 +15,8 @@ const LatestTweets = () => {
 
   return (
     <>
-      <div className="">
-        <div className="max-w-[1140px] px-3 mx-auto py-[40px] md:py-[60px] lg:py-[89px]">
+      <div>
+        <div className="max-w-[1140px] px-3 mx-auto py-10 md:py-15 lg:py-[89px]">
           <div className="flex justify-between items-center">
             <CommonHeading HeadText="Latest Tweets" HeadClass="uppercase" />
             <div className="flex items-center gap-[55px]">
