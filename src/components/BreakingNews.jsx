@@ -5,7 +5,7 @@ import CommonPara from "./common/CommonPara";
 const BreakingNews = () => {
   return (
     <>
-      <div className="border-y-2" id="#about">
+      <div className="border-y-2" id="about us">
         <div className="max-xl:px-4 border-b-2">
           <p className="max-w-[1140px] mx-auto [text-shadow:2px_2px_4px_#00000040] xl:text-[72px] ff-noto md:text-5xl sm:text-4xl text-3xl !leading-[140%] lg:py-16 md:py-12 py-8">
             “BREAKING NEWS: Hustlin Hardos set to launch the most anticipated

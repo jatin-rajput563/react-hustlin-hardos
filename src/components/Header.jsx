@@ -12,11 +12,13 @@ const Header = () => {
     { href: "https://medium.com/", icon: <Medium /> },
     { href: "https://opensea.io/", icon: <OpenSea /> },
   ];
+
   if (menuOpen) {
     document.body.classList.add("overflow-hidden");
   } else {
     document.body.classList.remove("overflow-hidden");
   }
+
   return (
     <>
       <div className="py-2">
@@ -31,22 +33,6 @@ const Header = () => {
                 menuOpen ? "top-0 bg-[#F6F1E2]" : "-top-full"
               }`}
             >
-              <div className="max-w-[561px] flex-col flex mx-auto sm:hidden border-x-2">
-                {navLinks.map((link, i) => (
-                  <a
-                    key={link}
-                    href={`#${link}`}
-                    onClick={() => setMenuOpen(false)}
-                    className={`px-6 ${
-                      i === 0 ? "border-t-2" : ""
-                    } border-t-2 w-full text-center py-[7px] uppercase ${
-                      i === navLinks.length - 1 ? "border-b-2" : ""
-                    }`}
-                  >
-                    {link.charAt(0).toUpperCase() + link.slice(1)}
-                  </a>
-                ))}
-              </div>
               <div className="flex gap-[18px] max-sm:gap-4 items-center">
                 {socialLinks.map(({ href, icon }, index) => (
                   <a
